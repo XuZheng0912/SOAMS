@@ -1,0 +1,15 @@
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\bin\Debug\StateOwnedAssetsManagementSystem.exe.config
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\bin\Debug\StateOwnedAssetsManagementSystem.exe
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\bin\Debug\StateOwnedAssetsManagementSystem.pdb
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\StateOwnedAssetsManagementSystem.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\MainWindow.g.cs
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\App.g.cs
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\StateOwnedAssetsManagementSystem_MarkupCompile.cache
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\StateOwnedAssetsManagementSystem_MarkupCompile.lref
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\MainWindow.baml
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\StateOwnedAssetsManagementSystem.g.resources
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\StateOwnedAssetsManagementSystem.Properties.Resources.resources
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\StateOwnedAssetsManagementSystem.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\StateOwnedAssetsManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\StateOwnedAssetsManagementSystem.exe
+C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\obj\Debug\StateOwnedAssetsManagementSystem.pdb
