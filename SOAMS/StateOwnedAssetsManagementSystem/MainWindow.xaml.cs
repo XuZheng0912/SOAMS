@@ -23,6 +23,7 @@ namespace StateOwnedAssetsManagementSystem
         public MainWindow()
         {
             InitializeComponent();
+            this.WindowState = System.Windows.WindowState.Maximized;
         }
     }
 }

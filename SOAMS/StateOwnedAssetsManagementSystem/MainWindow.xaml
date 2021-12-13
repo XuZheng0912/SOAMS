@@ -6,7 +6,28 @@
         xmlns:local="clr-namespace:StateOwnedAssetsManagementSystem"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Viewbox Stretch="Fill">
+        <Canvas Height="450" Width="800">
+            <Grid>
+
+            </Grid>
+            <TabControl Height="450" Width="800">
+                <TabItem Header="我的工作台">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="固定资产">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="无形资产">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="易耗品">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+                <TabItem Header="资产调剂">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
+        </Canvas>
+    </Viewbox>
 </Window>
