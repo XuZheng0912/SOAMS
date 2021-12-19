@@ -12,6 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data;
+using System.Data.SqlClient;
+using StateOwnedAssetsManagementSystem;
+using StateOwnedAssetsManagementSystem.Class;
+using StateOwnedAssetsManagementSystem.Class.document;
+using StateOwnedAssetsManagementSystem.Class.Entity;
+using StateOwnedAssetsManagementSystem.Class.SystemRole;
+using StateOwnedAssetsManagementSystem.Interface;
 
 namespace StateOwnedAssetsManagementSystem
 {
@@ -24,6 +32,34 @@ namespace StateOwnedAssetsManagementSystem
         {
             InitializeComponent();
             this.WindowState = System.Windows.WindowState.Maximized;
+            DoneDataGrid.ItemsSource = 
         }
+
+        private void AssetWarehouseButton_Click(object sender, RoutedEventArgs e)
+        {
+            AssetWarehouseWindow assetWarehouseWindow = new AssetWarehouseWindow();
+            assetWarehouseWindow.ShowDialog();
+        }
+
+        private void BriefBacklog_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private List<string> InitializeDoneDataGrid()
+        {
+            List<string> list = new List<string>();
+
+            string statement = $"SELECT Name,Date,AssetCentralAdminstrator,Accountant FROM WarehouseEntry WHERE Initiator='adminstrator'";
+            SqlDataReader sqlDataReader = DataBase.QueryExecute(statement);
+            
+        }
+    }
+
+    public class BriefDocument
+    {
+        public string Name { get; set; }
+        public string Date { get; set; }
+        public string stage { get; set; }
     }
 }

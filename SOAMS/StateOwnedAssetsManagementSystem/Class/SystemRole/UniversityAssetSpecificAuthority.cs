@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StateOwnedAssetsManagementSystem.Class.SystemRole
 {
-    class UniversityAssetSpecificAuthority
+    class UniversityAssetSpecificAuthority : User
     {
     }
 }

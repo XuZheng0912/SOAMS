@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StateOwnedAssetsManagementSystem.Class.Asset
+namespace StateOwnedAssetsManagementSystem.Class.document
 {
     class Card
     {

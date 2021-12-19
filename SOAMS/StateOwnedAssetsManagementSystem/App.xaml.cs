@@ -5,6 +5,12 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using StateOwnedAssetsManagementSystem;
+using StateOwnedAssetsManagementSystem.Class;
+using StateOwnedAssetsManagementSystem.Class.document;
+using StateOwnedAssetsManagementSystem.Class.Entity;
+using StateOwnedAssetsManagementSystem.Class.SystemRole;
+using StateOwnedAssetsManagementSystem.Interface;
 
 namespace StateOwnedAssetsManagementSystem
 {
@@ -13,5 +19,7 @@ namespace StateOwnedAssetsManagementSystem
     /// </summary>
     public partial class App : Application
     {
+        public static MainWindow mainWindow;
+        public static User SystemUser;
     }
 }

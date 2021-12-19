@@ -5,29 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StateOwnedAssetsManagementSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="扬州大学国有资产管理系统" Height="450" Width="800">
     <Viewbox Stretch="Fill">
         <Canvas Height="450" Width="800">
             <Grid>
 
             </Grid>
-            <TabControl Height="450" Width="800">
+            <TabControl Height="363" Width="800" Canvas.Top="87">
                 <TabItem Header="我的工作台">
+                    <Grid Background="#FFE5E5E5">
+                        <Button x:Name="AssetWarehouseButton" Content="资产入库" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Width="75" Click="AssetWarehouseButton_Click"/>
+                        <Button Content="资产申购" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Button Content="资产调拨" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Button Content="处置申请" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Button Content="原值变动" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Button Content="资产处置" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Button Content="Button" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" Width="75"/>
+                        <Label Content="快速发起工作流" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                        <DataGrid x:Name="BriefBacklog" HorizontalAlignment="Left" Height="163" Margin="168,40,0,0" VerticalAlignment="Top" Width="616" ColumnWidth="*" MouseDoubleClick="BriefBacklog_MouseDoubleClick"/>
+                        <Label Content="待办列表" HorizontalAlignment="Left" Margin="168,10,0,0" VerticalAlignment="Top"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="待办">
+                    <Grid Background="#FFE5E5E5">
+                        <DataGrid HorizontalAlignment="Left" Height="252" VerticalAlignment="Top" Width="794"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="已办" Margin="-2,0,-2,-1">
+                    <Grid Background="#FFE5E5E5">
+                        <ComboBox HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
+                        <DataGrid x:Name="DoneDataGrid" HorizontalAlignment="Left" Height="277" Margin="10,36,0,0" VerticalAlignment="Top" Width="774" ColumnWidth="*"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="我保管的资产">
                     <Grid Background="#FFE5E5E5"/>
                 </TabItem>
                 <TabItem Header="固定资产">
                     <Grid Background="#FFE5E5E5"/>
                 </TabItem>
-                <TabItem Header="无形资产">
+                <TabItem Header="维修登记查询">
                     <Grid Background="#FFE5E5E5"/>
                 </TabItem>
-                <TabItem Header="易耗品">
-                    <Grid Background="#FFE5E5E5"/>
-                </TabItem>
-                <TabItem Header="资产调剂">
+                <TabItem Header="资产统计查询">
                     <Grid Background="#FFE5E5E5"/>
                 </TabItem>
             </TabControl>
+            <Image Source="C:\Users\Administrator\Desktop\SOAMS\StateOwnedAssetsManagementSystem\Resources\YZULogo.png" Height="82" Width="298"/>
+            <Button Content="退出系统" Canvas.Left="715" Canvas.Top="10" Width="75"/>
+            <Button Content="退出登录" Canvas.Left="635" Canvas.Top="10" Width="75"/>
         </Canvas>
     </Viewbox>
 </Window>

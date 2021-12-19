@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StateOwnedAssetsManagementSystem;
 using StateOwnedAssetsManagementSystem.Class;
-using StateOwnedAssetsManagementSystem.Class.Asset;
+using StateOwnedAssetsManagementSystem.Class.document;
 using StateOwnedAssetsManagementSystem.Class.Entity;
 using StateOwnedAssetsManagementSystem.Class.SystemRole;
 using StateOwnedAssetsManagementSystem.Interface;
@@ -14,6 +14,12 @@ namespace StateOwnedAssetsManagementSystem.Class.SystemRole
 {
     class Accountant : User
     {
+
+        public Accountant(string number, string name)
+        {
+            Number = number;
+            Name = name;
+        }
 
         public void Check(WarehouseEntry document, bool status)
         {

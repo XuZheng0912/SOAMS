@@ -39,6 +39,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,6 +54,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -70,6 +73,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AssetWarehouseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -78,11 +89,21 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AssetWarehouseWindow.xaml.cs">
+      <DependentUpon>AssetWarehouseWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Class\Asset\Asset.cs" />
     <Compile Include="Class\Asset\Card.cs" />
-    <Compile Include="Class\Asset\WarehouseEntry.cs" />
+    <Compile Include="Class\document\AssetDisposalBill.cs" />
+    <Compile Include="Class\document\CentralAllotment.cs" />
+    <Compile Include="Class\document\DepartmentAllotment.cs" />
+    <Compile Include="Class\document\OriginalValueChangeBill.cs" />
+    <Compile Include="Class\document\PurchaseOrder.cs" />
+    <Compile Include="Class\document\SuperAllotment.cs" />
+    <Compile Include="Class\document\WarehouseEntry.cs" />
     <Compile Include="Class\DataBase.cs" />
-    <Compile Include="Class\Document.cs" />
+    <Compile Include="Class\document\Document.cs" />
+    <Compile Include="Class\Entity\Central.cs" />
     <Compile Include="Class\Entity\College.cs" />
     <Compile Include="Class\Entity\Section.cs" />
     <Compile Include="Class\Entity\University.cs" />
@@ -106,9 +127,12 @@
     <Compile Include="Class\SystemRole\UniversityAssetsAdminstrtor.cs" />
     <Compile Include="Class\SystemRole\UniversityAssetSpecificAuthority.cs" />
     <Compile Include="Class\SystemRole\UniversityAuthority.cs" />
-    <Compile Include="Class\User.cs" />
+    <Compile Include="Class\SystemRole\User.cs" />
     <Compile Include="Interface\IBusiness.cs" />
     <Compile Include="Interface\IDocumentCheck.cs" />
+    <Compile Include="LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -155,6 +179,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YZULogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Design.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

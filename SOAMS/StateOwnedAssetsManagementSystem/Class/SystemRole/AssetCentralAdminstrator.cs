@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StateOwnedAssetsManagementSystem;
 using StateOwnedAssetsManagementSystem.Class;
-using StateOwnedAssetsManagementSystem.Class.Asset;
+using StateOwnedAssetsManagementSystem.Class.document;
 using StateOwnedAssetsManagementSystem.Class.Entity;
 using StateOwnedAssetsManagementSystem.Class.SystemRole;
 using StateOwnedAssetsManagementSystem.Interface;
@@ -18,30 +18,45 @@ namespace StateOwnedAssetsManagementSystem.Class.SystemRole
     class AssetCentralAdminstrator : User
     {
 
-        /// <summary>
-        /// 发起资产入库业务
-        /// </summary>
-        /// <param name="type"></param>
-        /// <param name="name"></param>
-        /// <param name="value"></param>
-        /// <param name="keeper"></param>
-        /// <returns></returns>
-        public WarehouseEntry InitiateAssetWarehouse(string type, string name, double value, string keeper)
+        public AssetCentralAdminstrator(string number, string name)
         {
-            WarehouseEntry warehouseEntry = new WarehouseEntry(this, type, name, value, keeper);
-            Check(warehouseEntry, true);
-            return warehouseEntry;
+            Number = number;
+            Name = name;
         }
 
-        public void Check(Document document, bool status)
+        public override PurchaseOrder InitiateAssetPurchase()
         {
-            document["AssetCentralAdminstrator"].Status = status;
+            return base.InitiateAssetPurchase();
         }
 
-        public void Check(Document document, bool status, string reason)
+        public override WarehouseEntry InitiateAssetWarehouse(string type, string name, double value, string keeper)
         {
-            document["AssetCentralAdminstrator"].Status = status;
-            document["AssetCentralAdminstrator"].Reason = reason;
+            return base.InitiateAssetWarehouse(type, name, value, keeper);
+        }
+
+        public override OriginalValueChangeBill InitiateOriginalValueChangeBill()
+        {
+            return base.InitiateOriginalValueChangeBill();
+        }
+
+        public override CentralAllotment InitiateCentralAllotment()
+        {
+            return base.InitiateCentralAllotment();
+        }
+
+        public override void Check()
+        {
+            base.Check();
+        }
+
+        public override void AssetStatistics()
+        {
+            base.AssetStatistics();
+        }
+
+        public override void AssetsInquiry()
+        {
+            base.AssetsInquiry();
         }
     }
 }
